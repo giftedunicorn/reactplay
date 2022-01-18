@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+p:first-child {
+  color: red;
+}
+
+p:first-child:hover {
+  color: green;
+}
+
+p:first-child::after {
+  content: "!!!";
+}
+
+p::selection {
+    color: orange;
+    background: #333;
+}
+
+button::first-letter {
+  color: red;
+}
