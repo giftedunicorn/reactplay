@@ -1,0 +1,45 @@
+.layout {
+	border: 1px solid black;	
+	width: 100%;
+	min-height: 100vh;
+}
+
+.head {
+
+}
+
+.body {
+
+}
+
+.foot {
+
+}
+
+.positionContainer {
+	height: 200vh;
+    position: relative;
+	margin: 50px;
+	border: 1px solid black;
+}
+	
+.sticky {
+	position:sticky;
+	left:0px;
+	top:0px;
+	right: 0px;
+	border: 1px solid black;
+	padding: 16px;
+}
+	
+.abs {
+	position:absolute;
+	left:150px;
+	top:150px;
+}
+	
+.fixed {
+	position:fixed;
+	left:0px;
+	top:300px;
+}
