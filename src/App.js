@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import logo from './assets/logo.svg';
 import Modal from './components/Modal.js';
+import Dropdown from './components/Dropdown.js';
+import Danmu from './components/Danmu.js';
 import ScrollLoad from './components/ScrollLoad.js';
 import './styles/App.css';
 
@@ -105,6 +107,18 @@ function App() {
     )
   }
 
+  const renderDropdown = function() {
+    return (
+      <Dropdown />
+    )
+  }
+
+  const renderDanmu = function() {
+    return (
+      <Danmu />
+    )
+  }
+
   return (
     <div className="App">
       <div style={{margin: 100}}>
@@ -113,6 +127,8 @@ function App() {
         }}>Open</button>
       </div>
       {renderDemo()}
+      {renderDropdown()}
+      {renderDanmu()}
       {renderScroll()}
       {renderModal()}
     </div>
