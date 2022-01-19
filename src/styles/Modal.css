@@ -72,3 +72,12 @@
     visibility: hidden;
   }
 }
+
+.modal-animation-open {
+  animation: inAnimation 250ms ease-in;
+}
+
+.modal-animation-close {
+  animation: outAnimation 270ms ease-out;
+  animation-fill-mode: forwards;
+}
