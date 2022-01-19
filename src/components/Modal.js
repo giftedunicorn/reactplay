@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import './Modal.css';
+import './../styles/Modal.css';
 
 function Modal(props) {
   const modalRef = useRef(null);

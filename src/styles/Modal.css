@@ -19,7 +19,7 @@
 }
 
 .modal-overlay {
-	position: absolute;
+	position: fixed;
 	background-color: rgba(0,0,0,0.5);
 	top: 0;
 	bottom: 0;
@@ -31,7 +31,7 @@
 .modal-transition {
 	opacity: 0;
 	transform: none;
-	transition: all 0.3s linear;
+	transition: all 0.5s linear;
 }
 
 .modal-transition-open {

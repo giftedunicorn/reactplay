@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import './Dropdown.css';
-
-const modalRoot = document.getElementById("modal-root");
+import './../styles/Dropdown.css';
 
 function Dropdown(props) {
   return (

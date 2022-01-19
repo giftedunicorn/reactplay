@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import logo from './logo.svg';
+import logo from './assets/logo.svg';
 import Modal from './components/Modal.js';
 import ScrollLoad from './components/ScrollLoad.js';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   let [showModal, setShowModal] = useState(false)
