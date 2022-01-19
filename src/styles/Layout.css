@@ -32,10 +32,10 @@
 	padding: 16px;
 }
 	
-.abs {
+.absolute {
 	position:absolute;
-	left:150px;
-	top:150px;
+	left:250px;
+	top:250px;
 }
 	
 .fixed {

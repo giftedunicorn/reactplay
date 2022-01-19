@@ -11,9 +11,9 @@ function Layout() {
 
   const renderPosition = function() {
     return (
-      <div className="positionContainer">
+      <div id="relative" className="positionContainer">
         <div class="sticky">stikcy head</div>
-        <h2 class="abs">这是一个absolute的标题</h2>
+        <h2 class="absolute">这是一个absolute的标题</h2>
         <h2 class="fixed">这是一个fixed的标题</h2>
         <p>用relative, 相对于自己的位置来移动，比如 left -20，意思就是往自己左边移动20。一般用来作为absolute的容器。</p>
         <p>用absolute,一个元素可以放在页面上的任何位置，相对于父级relative元素，如果没有则html元素。</p>
