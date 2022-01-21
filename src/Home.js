@@ -54,6 +54,29 @@ function App() {
     // .catch()
   }
 
+  const targetOnClick = function(e) {
+    let target = e.target
+    let currentTarget = e.currentTarget
+    console.log("target", target)  // li
+    console.log("currentTarget", currentTarget)  // li
+    console.log(target === currentTarget)  // true
+  }
+
+  // learn event current target vs target
+  const renderCurrentTarget = function() {
+    return (
+      <div>
+        测试currentTarget and target，两个会因为情况不同而指向不同的对象
+        <ul onClick={(e) => targetOnClick(e)}>
+          <li>hello 1</li>
+          <li>hello 2</li>
+          <li>hello 3</li>
+          <li>hello 4</li>
+        </ul>
+      </div>
+    )
+  }
+
   const renderModal = function() {
     return (
       <Modal 
@@ -128,6 +151,7 @@ function App() {
       </div>
       {renderDemo()}
       {renderDropdown()}
+      {renderCurrentTarget()}
       {renderDanmu()}
       {renderScroll()}
       {renderModal()}

@@ -2,29 +2,6 @@ import { useState } from 'react'
 import './styles/Layout.css';
 
 function Layout() {
-  const targetOnClick = function(e) {
-    let target = e.target
-    let currentTarget = e.currentTarget
-    console.log("target", target)  // li
-    console.log("currentTarget", currentTarget)  // li
-    console.log(target === currentTarget)  // true
-  }
-
-  // learn event current target vs target
-  const renderCurrentTarget = function() {
-    return (
-      <div>
-        测试currentTarget and target，两个会因为情况不同而指向不同的对象
-        <ul onClick={(e) => targetOnClick(e)}>
-          <li>hello 1</li>
-          <li>hello 2</li>
-          <li>hello 3</li>
-          <li>hello 4</li>
-        </ul>
-      </div>
-    )
-  }
-
   // learn css position
   const renderPosition = function() {
     return (
@@ -65,24 +42,11 @@ function Layout() {
     )
   } 
 
-  // learn how to center a item
-  const renderCenter = function() {
-    return (
-      <div className="container center">
-        <div className="centerBox">
-          <div>center</div>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="layout">
       {renderPosition()}
-      {renderCurrentTarget()}
       {renderLeftRight()}
       {renderHeadFoot()}
-      {renderCenter()}
     </div>
   );
 }
