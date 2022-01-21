@@ -10,14 +10,41 @@
 }
 
 /* css center box */
-.center {
-	/*display: flex;*/
+.centerFlex {
+	display: flex;
     /*align-items: center;*/
     /*justify-content: center;*/
+}
+
+.centerBoxFlex {
+	border: 1px solid black;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	color: white;
+	margin: auto;
+}
+
+.centerGrid {
+	display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.centerBoxGrid {
+	border: 1px solid black;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	color: white;
+	/*margin: auto;*/
+}
+
+.centerTransform {
     position: relative;
 }
 
-.centerBox {
+.centerBoxTransform {
 	border: 1px solid black;
 	width: 200px;
 	height: 200px;
@@ -27,4 +54,60 @@
 	left: 50%; 
 	top: 50%; 
 	transform: translate(-50%,-50%);
+}
+
+.centerMargin {
+	position: relative;
+}
+
+.centerBoxMargin {
+	border: 1px solid black;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	color: white;
+	margin: auto;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+}
+
+.centertableOuter {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.centertableMiddle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.centertableInner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerBoxTable {
+	border: 1px solid black;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	color: white;
+}
+
+.centerInline {
+    text-align: center;
+}
+
+.centerBoxInline {
+	border: 1px solid black;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	color: white;
+    display: inline-block;
 }
