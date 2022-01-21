@@ -1,0 +1,30 @@
+.layout {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.container {
+	border: 1px solid black;
+	min-height: 100vh;
+	margin: 50px;
+}
+
+/* css center box */
+.center {
+	/*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    position: relative;
+}
+
+.centerBox {
+	border: 1px solid black;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	color: white;
+	position: absolute;
+	left: 50%; 
+	top: 50%; 
+	transform: translate(-50%,-50%);
+}
