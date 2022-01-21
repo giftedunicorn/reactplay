@@ -51,17 +51,6 @@ function Layout() {
     )
   }
 
-  // learn how to center a item
-  const renderCenter = function() {
-    return (
-      <div className="container center">
-        <div className="box">
-          <div>center</div>
-        </div>
-      </div>
-    )
-  }
-
   // learn how to make head body foot layout
   const renderHeadFoot = function() {
     const items = Array(100).fill(0).map((item, index) => <div key={`${index}-body`}>{index} body</div>)
@@ -69,20 +58,31 @@ function Layout() {
 
     return (
       <div className="container headFootcontainer">
-        <div className="head">head</div>
-        <div className="body">{text}</div>
-        <div className="foot">foot</div>
+        <div className="headItem">head</div>
+        <div className="bodyItem">{text}</div>
+        <div className="footItem">foot</div>
       </div>
     )
   } 
+
+  // learn how to center a item
+  const renderCenter = function() {
+    return (
+      <div className="container center">
+        <div className="centerBox">
+          <div>center</div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="layout">
       {renderPosition()}
       {renderCurrentTarget()}
       {renderLeftRight()}
-      {renderCenter()}
       {renderHeadFoot()}
+      {renderCenter()}
     </div>
   );
 }
