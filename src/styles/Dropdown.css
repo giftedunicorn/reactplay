@@ -1,3 +1,29 @@
+.dropdown {
+	position: relative;
+}
+
 .overlay {
-	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.menuContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.menuBox {
+	padding: 8px;
+	background-color: red;
+	z-index: 10;
+	border-radius: 5px;
+	width: max-content;
+	height: max-content;
+	color: white;
 }

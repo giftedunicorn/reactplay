@@ -131,8 +131,18 @@ function App() {
   }
 
   const renderDropdown = function() {
+    const options = [
+      "option 1",
+      "option 2",
+      "option 3",
+      "option 4",
+      "option 5",
+    ]
+
     return (
-      <Dropdown />
+      <div style={{margin: 100}}>
+        <Dropdown options={options} position="right" />
+      </div>
     )
   }
 
