@@ -152,6 +152,27 @@ function App() {
     )
   }
 
+  const renderDynamicImport = function() {
+    return (
+      <div style={{margin: 100}}>
+        <button onClick={() => {
+          import('./utils/print')
+          .then((module) => {
+            const print = module.default;
+            print();
+          })
+          import("https://cdn.rawgit.com/lodash/lodash/4.17.4-es/lodash.default.js")
+          .then(({ default: _ }) => {
+            console.log(`lodash version ${_.VERSION} is loaded`)
+            console.log('_.uniq([2, 1, 2]) :', _.uniq([2, 1, 2]));
+          })
+        }}>
+          Dynamic Import
+        </button>
+      </div>
+    )
+  }
+
   return (
     <div className="App">
       <div style={{margin: 100}}>
@@ -161,6 +182,7 @@ function App() {
       </div>
       {renderDemo()}
       {renderDropdown()}
+      {renderDynamicImport()}
       {renderCurrentTarget()}
       {renderDanmu()}
       {renderScroll()}
