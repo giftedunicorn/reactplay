@@ -173,6 +173,34 @@ function App() {
     )
   }
 
+  const testStopPropagation = function(event, id) {
+    // only print 1 and will stop bubbling phase
+    event.stopPropagation()
+    alert(id)
+  }
+
+  const testPreventDefault = function(event) {
+    // will prevent <a> redirect action
+    event.preventDefault()
+  }
+
+  const renderHtmlFunctions = function() {
+    return (
+      <div>
+        <a href="http://www.baidu.com" onClick={(event) => testPreventDefault(event)}>test preventDefault</a>
+        <div onClick={(event) => testStopPropagation(event, 4)}>
+          <div onClick={(event) => testStopPropagation(event, 3)}>
+            <div onClick={(event) => testStopPropagation(event, 2)}>
+              <div onClick={(event) => testStopPropagation(event, 1)}>
+                test stopPropagation
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="App">
       <div style={{margin: 100}}>
@@ -180,6 +208,7 @@ function App() {
           openModal()
         }}>Open</button>
       </div>
+      {renderHtmlFunctions()}
       {renderDemo()}
       {renderDropdown()}
       {renderDynamicImport()}
