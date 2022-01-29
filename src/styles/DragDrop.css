@@ -11,3 +11,14 @@
   border: 1px solid blue;
   cursor: pointer;
 }
+
+.container-fluid {
+}
+
+.row {
+	display: flex;
+}
+
+.col-6 {
+	flex: 1;
+}

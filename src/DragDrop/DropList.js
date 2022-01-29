@@ -8,9 +8,9 @@ export default () => {
     return (
         <Drop onItemDropped={itemDropped} dropEffect="link">
             <div className="drag-drop-container">
-                {items.map(item => (
-                    <div key={item} className="item">
-                        {item}
+                {items.map((item, index) => (
+                    <div key={index} className="item">
+                        <img src={item} />
                     </div>
                 ))}
             </div>
