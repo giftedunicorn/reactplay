@@ -9,6 +9,10 @@
 	margin: 50px;
 }
 
+.outline {
+	border: 1px solid black;
+}
+
 /* css center box */
 .centerFlex {
 	display: flex;

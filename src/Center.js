@@ -68,6 +68,19 @@ function Center() {
     )
   }
 
+  const renderInlineBlock = function() {
+    return (
+      <div>
+        <div>
+          <span className="outline">inline element</span>
+        </div>
+        <div>
+          <div className="outline">block element</div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="layout">
       {renderCenterFlex()}
@@ -76,6 +89,7 @@ function Center() {
       {renderCenterMargin()}
       {renderCenterTable()}
       {renderCenterInline()}
+      {renderInlineBlock()}
     </div>
   );
 }

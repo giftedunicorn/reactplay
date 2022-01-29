@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import logo from './assets/logo.svg';
 import Modal from './components/Modal.js';
 import Dropdown from './components/Dropdown.js';
@@ -7,10 +7,19 @@ import ScrollLoad from './components/ScrollLoad.js';
 import './styles/App.css';
 
 function App() {
+  // react function最上层的代码，这里到useEffect，如果state更新的话每次都会被执行，print 123
+  console.log(123)
   let [showModal, setShowModal] = useState(false)
   let [email, setEmail] = useState('')
   let [password, setPassword] = useState('')
   let [isSignin, setIsSignin] = useState(true)
+
+  useEffect(() => {
+    console.log('useEffect1')
+  }, [])
+  useEffect(() => {
+    console.log('useEffect2')
+  })
 
   const openModal = function() {
      setShowModal(true)
