@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from './Home';
 import Layout from './Layout';
 import Center from './Center';
+import DragDrop from './DragDrop';
 
 export default function App() {
   return (
@@ -13,12 +14,14 @@ export default function App() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/layout">Layout</Link></li>
             <li><Link to="/center">Center</Link></li>
+            <li><Link to="/dragdrop">DragDrop</Link></li>
           </ul>
         </nav>
     		<Routes>
     			<Route path="/" element={<Home />} />
-          <Route path="Layout" element={<Layout />} />
-          <Route path="Center" element={<Center />} />
+          <Route path="/layout" element={<Layout />} />
+          <Route path="/center" element={<Center />} />
+          <Route path="/dragdrop" element={<DragDrop />} />
     		</Routes>
       </div>
     </Router>
