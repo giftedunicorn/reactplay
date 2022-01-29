@@ -16,14 +16,27 @@ const Drop = props => {
     };
 
     const drop = ev => {
+        ev.preventDefault();
+        // drag item from drag area
         const droppedItem = ev.dataTransfer.getData("drag-item");
         if (droppedItem) {
             props.onItemDropped(droppedItem);
+        } else {
+            // drag item from outside of browser
+            let file = ev.dataTransfer.files[0]
+            let reader = new FileReader();
+            reader.onload = function (event) {
+                if (event.target.result) {
+                    props.onItemDropped(event.target.result);
+                }
+            }
+            reader.readAsDataURL(file);
         }
         setIsOver(false);
     };
 
     const dragEnter = ev => {
+        ev.preventDefault();
         ev.dataTransfer.dropEffect = props.dropEffect;
         setIsOver(true);
     };
