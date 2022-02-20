@@ -4,6 +4,7 @@ import Home from './Home';
 import Layout from './Layout';
 import Center from './Center';
 import DragDrop from './DragDrop';
+import Autocomplete from './Autocomplete'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
             <li><Link to="/layout">Layout</Link></li>
             <li><Link to="/center">Center</Link></li>
             <li><Link to="/dragdrop">DragDrop</Link></li>
+            <li><Link to="/autocomplete">Autocomplete</Link></li>
           </ul>
         </nav>
     		<Routes>
@@ -22,6 +24,7 @@ export default function App() {
           <Route path="/layout" element={<Layout />} />
           <Route path="/center" element={<Center />} />
           <Route path="/dragdrop" element={<DragDrop />} />
+          <Route path="/autocomplete" element={<Autocomplete />} />
     		</Routes>
       </div>
     </Router>
