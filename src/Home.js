@@ -220,7 +220,7 @@ function App() {
       {renderHtmlFunctions()}
       {renderDemo()}
       {renderDropdown()}
-      {renderDynamicImport()}
+      {{/*renderDynamicImport*/}()}
       {renderCurrentTarget()}
       {renderDanmu()}
       {renderScroll()}
