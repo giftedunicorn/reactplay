@@ -161,26 +161,26 @@ function App() {
     )
   }
 
-  // const renderDynamicImport = function() {
-  //   return (
-  //     <div style={{margin: 100}}>
-  //       <button onClick={() => {
-  //         import('./utils/print')
-  //         .then((module) => {
-  //           const print = module.default;
-  //           print();
-  //         })
-  //         import("https://cdn.rawgit.com/lodash/lodash/4.17.4-es/lodash.default.js")
-  //         .then(({ default: _ }) => {
-  //           console.log(`lodash version ${_.VERSION} is loaded`)
-  //           console.log('_.uniq([2, 1, 2]) :', _.uniq([2, 1, 2]));
-  //         })
-  //       }}>
-  //         Dynamic Import
-  //       </button>
-  //     </div>
-  //   )
-  // }
+  const renderDynamicImport = function() {
+    return (
+      <div style={{margin: 100}}>
+        <button onClick={() => {
+          import('./utils/print')
+          .then((module) => {
+            const print = module.default;
+            print();
+          })
+          import("https://cdn.rawgit.com/lodash/lodash/4.17.4-es/lodash.default.js")
+          .then(({ default: _ }) => {
+            console.log(`lodash version ${_.VERSION} is loaded`)
+            console.log('_.uniq([2, 1, 2]) :', _.uniq([2, 1, 2]));
+          })
+        }}>
+          Dynamic Import
+        </button>
+      </div>
+    )
+  }
 
   const testStopPropagation = function(event, id) {
     // only print 1 and will stop bubbling phase
@@ -220,7 +220,7 @@ function App() {
       {renderHtmlFunctions()}
       {renderDemo()}
       {renderDropdown()}
-      {{/*renderDynamicImport*/}()}
+      {renderDynamicImport()}
       {renderCurrentTarget()}
       {renderDanmu()}
       {renderScroll()}
